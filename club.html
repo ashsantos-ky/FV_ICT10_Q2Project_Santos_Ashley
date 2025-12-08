@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Q2-ICT10:SkillsTest</title>
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.8.1/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2025.8.1/core.js"></script>
+
+    <style>
+        body {
+            font-family: "DM Serif Text", serif;
+            font-size: 20px;
+            background-color: #ebd9d7;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            background: #1a3a52;
+            padding: 20px;
+        }
+        .navbar img {
+            height: 60px;
+            margin-right: auto;
+        }
+        .navbar a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+        }
+
+        footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1a3a52;
+            padding: 20px;
+            margin-top: 0;
+            color: #f5efeb;
+        }
+
+        footer p {
+            color: #f5efeb;
+            text-align: center;
+        }
+
+        .container {
+            background-color: #3d5a7a;
+            padding: 40px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 30px;
+        }
+
+        h3 {
+            color: white;
+        }
+
+        select, button {
+            margin: 10px;
+            font-size: 15px;
+            padding: 8px;
+        }
+
+        button {
+            background-color: #1a3a52;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0d1f2d;
+        }
+
+        .results-box {
+            margin-top: 30px;
+            text-align: left;
+            background-color: white;
+            padding: 15px;
+            border-radius: 5px;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .results-box h3 {
+            color: #1a3a52;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        #output {
+            margin-top: 5px;
+            font-size: 16px;
+            color: #1a3a52;
+            line-height: 1.3;
+            white-space: pre-line;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="logo.png" alt="OBMC Logo">
+            <a href="index.html">Home</a>
+            <a href="orderform.html">GWA</a>
+            <a href="contact.html">School Club Info</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>School Club Information</h1>
+
+        <h3>Select a Club:</h3>
+
+        <select id="club-select">
+            <option value="">Select a Club</option>
+            <option value="0">Science Club</option>
+            <option value="1">Math Club</option>
+            <option value="2">Band Club</option>
+            <option value="3">Dance Club</option>
+            <option value="4">Volleyball Club</option>
+            <option value="5">Basketball Club</option>
+        </select>
+
+        <br>
+        <button id="button">Submit Club Information</button>
+
+        <div class="results-box">
+            <h3>Club Details:</h3>
+            <div id="output"></div>
+        </div>
+    </div>
+
+    <script type="py" src="club.py"></script>
+
+    <footer>
+        <p><strong>S.Y 2025-2026</strong></p>
+    </footer>
+</body>
+</html>

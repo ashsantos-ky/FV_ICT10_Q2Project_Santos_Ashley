@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Q2-ICT10:Seatwork</title>
+        <link rel="stylesheet" href="https://pyscript.net/releases/2025.8.1/core.css" />
+        <script type="module" src="https://pyscript.net/releases/2025.8.1/core.js"></script>
+    <style>
+        body {
+            font-family: "DM Serif Text", serif;
+            font-size: 20px;
+            background-color: #ebd9d7;
+
+        }
+        .navbar {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            background: #1a3a52;
+            padding: 20px;
+            
+        }
+        .navbar img {
+            height: 60px;
+            margin-right: auto;
+        }
+        .navbar a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none; 
+        }
+        footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1a3a52;
+            padding: 20px;
+            margin-top: 0;
+            color: #f5efeb;
+        }
+        footer p {
+            color: #f5efeb;
+            text-align: center;
+        }
+        .container {
+            font-family: "DM Serif Text", serif;
+            background-color: #3d5a7a;
+            margin: 0;
+            padding: 40px 20px;
+            text-align: center;
+            color: white;
+        }
+        label, input, button {
+            margin: 10px;
+            font-size: 15px;
+        }
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 30px;
+        }
+        h3 {
+            color: white;
+        }
+        button {
+            background-color: #1a3a52;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0d1f2d;
+        }
+        .results-box {
+            margin-top: 30px;
+            text-align: left;
+            background-color: white;
+            padding: 15px;
+            border-radius: 5px;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .results-box h3 {
+            color: #1a3a52;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        #student_info {
+            margin-bottom: 8px;
+            color: #1a3a52;
+        }
+        #summary {
+            margin-top: 8px;
+            margin-bottom: 8px;
+            color: #1a3a52;
+        }
+        #output {
+            margin-top: 8px;
+            color: #1a3a52;
+        }
+    </style>
+    </head>
+    <body>
+    <header>
+        <nav class="navbar">
+            <img src="logo.png" alt="OBMC Logo">
+            <a href="index.html">Home</a>
+            <a href="orderform.html">GWA</a>
+            <a href="contact.html">School Club Info</a>
+        </nav>
+    </header>
+    <div id="container" class="container">
+            <h1>Student Grade Calculator</h1>
+
+                <label for="name">First Name:</label>
+                <input type="text" id="first_name" />
+                <label for="name">Last Name:</label>
+                <input type="text" id="last_name" />
+               <br>
+            <h3>Enter your grades:</h3>
+             <label for="science">Science</label>
+                <input type="text" id="science" />
+                <label for="math">Math</label>
+                <input type="text" id="math" />
+                <br>
+                 <label for="english">English</label>
+                <input type="text" id="english" />
+                <label for="filipino">Filipino</label>
+                <input type="text" id="filipino" />
+                <br>
+                 <label for="ict">ICT</label>
+                <input type="text" id="ict" />
+                 <label for="pe">P.E</label>
+                <input type="text" id="pe" />
+
+                <br><br>
+                <button id="general_weighted_average" py-click="general_weighted_average">Calculate GWA</button>
+                <button py-click="clear_fields">Clear</button>
+
+                <div class="results-box">
+                    <h3>Results:</h3>
+                    <div id="student_info" style="font-weight: bold;"></div>
+                    <div id="summary" style="white-space: pre-wrap; margin-top: 10px; font-family: monospace;"></div>
+                    <div id="output" style="margin-top: 10px; font-size: 18px; color: green;"></div>
+                </div>
+            </div>
+             <script type="py" src="gwa.py"></script>
+    
+    <footer>
+      <p><strong>S.Y 2025-2026</strong></p>
+    </footer>
+    </body>
+</html>
